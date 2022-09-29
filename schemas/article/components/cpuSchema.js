@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const cpuSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -23,5 +23,5 @@ export const cpuSchema = mongoose.Schema({
     onboardGPU: schemaSettings.string,
     tdp: schemaSettings.number,
     info: schemaSettings.string,
-})
-export const ArticleCpuModel = mongoose.model('cpuCol', cpuSchema)
+});
+export const ArticleCpuModel = mongoose.model('cpuCol', cpuSchema);

@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const mainboardSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -39,8 +39,8 @@ export const mainboardSchema = mongoose.Schema({
         caseFan: schemaSettings.number,
     },
     info: schemaSettings.string,
-})
+});
 export const ArticleMainboardModel = mongoose.model(
     'mainboardCol',
     mainboardSchema
-)
+);

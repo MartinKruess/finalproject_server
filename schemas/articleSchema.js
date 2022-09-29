@@ -1,14 +1,14 @@
-import { mongoose } from 'mongoose'
-import { caseSchema } from './articleSchemas/caseSchema'
-import { cpuSchema } from './articleSchemas/cpuSchema'
-import { GrakaSchema } from './articleSchemas/gpuSchema'
-import { mainboardSchema } from './articleSchemas/mainboardSchema'
-import { multimediaCableSchema } from './articleSchemas/multimediaCableSchema'
-import { powerAdapterSchema } from './articleSchemas/powerAdapterSchema'
-import { ramSchema } from './articleSchemas/ramSchema'
-import { screenSchema } from './articleSchemas/screenSchema'
-import { soundCardSchema } from './articleSchemas/soundCardSchema'
-import { storageSchema } from './articleSchemas/storageSchema'
+import { mongoose } from 'mongoose';
+import { caseSchema } from './articleSchemas/caseSchema.js';
+import { cpuSchema } from './articleSchemas/cpuSchema.js';
+import { GrakaSchema } from './articleSchemas/gpuSchema.js';
+import { mainboardSchema } from './articleSchemas/mainboardSchema.js';
+import { multimediaCableSchema } from './articleSchemas/multimediaCableSchema.js';
+import { powerAdapterSchema } from './articleSchemas/powerAdapterSchema.js';
+import { ramSchema } from './articleSchemas/ramSchema.js';
+import { screenSchema } from './articleSchemas/screenSchema.js';
+import { soundCardSchema } from './articleSchemas/soundCardSchema.js';
+import { storageSchema } from './articleSchemas/storageSchema.js';
 
 export const ArticleDataModel1 = mongoose.model('articleDB', {
     caseSchema,
@@ -21,6 +21,6 @@ export const ArticleDataModel1 = mongoose.model('articleDB', {
     screenSchema,
     soundCardSchema,
     storageSchema,
-})
+});
 
-export const ArticleDataModel2 = mongoose.model('caseCol', caseSchema)
+export const ArticleDataModel2 = mongoose.model('caseCol', caseSchema);

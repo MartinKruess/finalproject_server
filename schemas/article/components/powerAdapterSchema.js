@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const powerAdapterSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -10,8 +10,8 @@ export const powerAdapterSchema = mongoose.Schema({
     cache: schemaSettings.number,
     maxPowerConsumption: schemaSettings.number,
     shockResistance: schemaSettings.number,
-})
+});
 export const ArticlePowerAdapterModel = mongoose.model(
     'powerAdapterCol',
     powerAdapterSchema
-)
+);

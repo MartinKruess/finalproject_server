@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const storageSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -10,5 +10,5 @@ export const storageSchema = mongoose.Schema({
     cache: schemaSettings.number,
     maxPowerConsumption: schemaSettings.number,
     shockResistance: schemaSettings.number,
-})
-export const ArticleStorageModel = mongoose.model('storageCol', storageSchema)
+});
+export const ArticleStorageModel = mongoose.model('storageCol', storageSchema);

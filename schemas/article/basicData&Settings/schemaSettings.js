@@ -1,4 +1,4 @@
-import { isObjectIdOrHexString } from "mongoose";
+import mongoose from 'mongoose';
 
 export const schemaSettings = {
     reqString: {
@@ -15,9 +15,6 @@ export const schemaSettings = {
     number: {
         type: Number,
     },
-    files: {
-        type: File,
-    },
     bool: {
         type: Boolean,
     },
@@ -25,11 +22,13 @@ export const schemaSettings = {
         type: Array,
     },
     sizes: {
-        w: {type: number},
-        h: {type: number},
-        d: {type: number},
+        w: { type: Number },
+        h: { type: Number },
+        d: { type: Number },
     },
+    /* 
+    removed the company id, have to be set directly in the the schema itself 
     companyID: {
-        type: iObjectId,
-    }
-}
+        type: 
+    } */
+};

@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const caseSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -41,5 +41,5 @@ export const caseSchema = mongoose.Schema({
         powerSupply: schemaSettings.string,
         warranty: schemaSettings.string,
     },
-})
-export const ArticleCaseModel = mongoose.model('caseCol', caseSchema)
+});
+export const ArticleCaseModel = mongoose.model('caseCol', caseSchema);

@@ -1,64 +1,40 @@
-import mongoose from 'mongoose'
-
-const reqString = {
-    type: String,
-    required: true,
-}
-
-const string = {
-    type: String,
-}
-
-const reqNumber = {
-    type: Number,
-    required: true,
-}
-
-const number = {
-    type: Number,
-}
-
-const array = {
-    type: Array,
-}
-
-const bool = {
-    type: Boolean,
-}
+import mongoose from 'mongoose';
+import { schemaSettings } from '../article/basicData&Settings/schemaSettings.js';
 
 const userSchema = mongoose.Schema({
-    kID: string,
-    mail: reqString,
-    username: reqString,
-    password: reqString,
-    group: string,
-    status: {
-        type: string,
-        enum: ['pending', 'active'],
-        default: 'pending',
-    },
+    mail: schemaSettings.reqString,
+    username: schemaSettings.reqString,
+    password: schemaSettings.reqString,
+    group: schemaSettings.string,
+    status: { Boolean, default: false },
     order: {
-        invoice: array,
-        articles: array,
+        invoice: schemaSettings.array,
+        articles: schemaSettings.array,
     },
-    sex: string,
-    firstname: reqString,
-    lastname: reqString,
+    sex: schemaSettings.string,
+    firstname: schemaSettings.string,
+    lastname: schemaSettings.string,
     address: {
-        street: string,
-        nr: number,
-        zip: number,
-        city: string,
-        country: string,
+        street: schemaSettings.string,
+        nr: schemaSettings.number,
+        zip: schemaSettings.number,
+        city: schemaSettings.string,
+        country: schemaSettings.string,
     },
     payment: {
-        method: string,
-        iban: string,
-        bank: string,
-        sepa: bool,
+        method: schemaSettings.string,
+        iban: schemaSettings.string,
+        bank: schemaSettings.string,
+        sepa: schemaSettings.bool,
     },
-    wishlist: array,
-    newsletter: bool,
-})
+    company: {
+        name: schemaSettings.reqString,
+        form: schemaSettings.string,
+        hra: schemaSettings.number,
+        tax: schemaSettings.number,
+    },
+    wishlist: schemaSettings.array,
+    newsletter: schemaSettings.bool,
+});
 
-export const UserDataModel = mongoose.model('usersCol', userSchema)
+export const UserDataModel = mongoose.model('users', userSchema);

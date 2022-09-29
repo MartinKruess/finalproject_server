@@ -1,18 +1,25 @@
-import mongoose from 'mongoose'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { schemaSettings } from '../article/basicData&Settings/schemaSettings.js';
 
-export const companySchema = mongoose.Schema({
-    company: {
+export const companySchema = mongoose.Schema(
+    {
+        mail: schemaSettings.reqString,
+        sex: schemaSettings.string,
+        username: schemaSettings.reqString,
+        password: schemaSettings.reqString,
         name: schemaSettings.reqString,
-        street: schemaSettings.reqString,
-        nr: schemaSettings.reqNumber,
-        zip: schemaSettings.reqNumber,
-        city: schemaSettings.reqString,
-        country: schemaSettings.reqString,
-        iban: schemaSettings.reqString,
-        bank: schemaSettings.reqString,
+        group: schemaSettings.reqString,
+        street: schemaSettings.string,
+        nr: schemaSettings.number,
+        zip: schemaSettings.number,
+        city: schemaSettings.string,
+        country: schemaSettings.string,
+        iban: schemaSettings.string,
+        bank: schemaSettings.string,
     },
-    articles: schemaSettings.array,
-})
+    {
+        articles: schemaSettings.array,
+    }
+);
 
-export const CompanyDataModel = mongoose.model('companyCol', companySchema)
+export const CompanyDataModel = mongoose.model('companys', companySchema);

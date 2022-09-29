@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { basicArticleData } from '../basicData&Settings/basicArticleData'
-import { schemaSettings } from '../basicData&Settings/schemaSettings'
+import mongoose from 'mongoose';
+import { basicArticleData } from '../basicData&Settings/basicArticleData.js';
+import { schemaSettings } from '../basicData&Settings/schemaSettings.js';
 
 export const screenSchema = mongoose.Schema({
     baseData: basicArticleData,
@@ -53,5 +53,5 @@ export const screenSchema = mongoose.Schema({
         },
         warranty: schemaSettings.string,
     },
-})
-export const ArticleScreenModel = mongoose.model('screenCol', screenSchema)
+});
+export const ArticleScreenModel = mongoose.model('screenCol', screenSchema);
